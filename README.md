@@ -107,10 +107,15 @@ python app.py
 - **Prometheus监控**: http://localhost:9091/metrics
 - **RabbitMQ管理**: http://localhost:15672
 - **Redis监控**: redis-cli monitor
+  
 ## 性能
-<img width="1920" height="274" alt="image" src="https://github.com/user-attachments/assets/38101430-832f-4337-8cfc-c9a1efc0231b" />
-<img width="1906" height="260" alt="image" src="https://github.com/user-attachments/assets/c4c478f7-8aac-4b85-a241-9001da555919" />
-<img width="1902" height="287" alt="image" src="https://github.com/user-attachments/assets/108dbe1c-8de3-4d85-b5f7-a72d8b9511ce" />
+使用Locust对平台性能进行测试（针对平台登录接口的测试用例）
+- **ai测试全流程**:生成12个测试用例，完整业务流程平均为64s左右
+-<img width="1920" height="274" alt="image" src="https://github.com/user-attachments/assets/38101430-832f-4337-8cfc-c9a1efc0231b" />
+- **ai降级测试全流程**:表示当ai服务失效，使用模拟生成测试用例（9个）的方式，每个完整业务流程平均为6s左右
+-<img width="1906" height="260" alt="image" src="https://github.com/user-attachments/assets/c4c478f7-8aac-4b85-a241-9001da555919" />
+- **用例执行接口**:在800个用户，每秒处理350个请求，平均响应为0.4s左右
+-<img width="1902" height="287" alt="image" src="https://github.com/user-attachments/assets/108dbe1c-8de3-4d85-b5f7-a72d8b9511ce" />
 
 
 ## 添加新模块的步骤  
